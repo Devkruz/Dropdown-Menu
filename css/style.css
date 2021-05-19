@@ -1,0 +1,102 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:15px 2%;
+	height:100vh;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	background:lightgray;
+	background-size:cover;
+}
+.menu{
+
+	background:#2727;
+	text-align:center;
+	position:fixed;
+	width:90%;
+}
+.menu ul{
+	display:flex;
+	list-style:none;
+	justify-content:center;
+}
+
+.menu ul li{
+
+	width:120px;
+	margin:5px 13px;
+    padding:15px;
+    transition:background-color 300ms ease-out;
+}
+.menu ul li a{
+	   width:100%;
+	   height:100%;
+	   display:block;
+	   color:white;
+	   text-decoration:none;
+}
+.menu ul li:hover, .active{
+	     background-color:tomato;
+	     border-radius:3px;
+}
+.menu .fa{
+	margin:0 5px;
+}
+.sub{
+	display:none;
+}
+.menu ul li:hover .sub{
+	display:block;
+	position:absolute;
+	background-color:#2727;
+	margin:15px 0 0 -15px;
+}
+.menu ul li:hover .sub ul{
+	display:block;
+	margin:10px;
+}
+
+.menu ul li:hover .sub ul li{
+	width:150px;
+	padding:10px;
+	border-bottom:1px dotted white;
+	text-align:left;
+
+}
+.menu .fa-angle-down{
+	float:right;
+	transform:rotate(180deg);
+	transition:300ms;
+}
+
+.sub .hover-me:hover .fa-angle-left{
+	transform:rotate(270deg);
+	transition:transform 300ms;
+}
+.service:hover .fa-angle-down,.design:hover .fa-angle-down{
+	transform:rotate(720deg)
+}
+.menu ul li:hover .sub ul li:last-child{
+	border-bottom:none;
+}
+.arrow{
+	float:left;
+}
+.branding-sub{
+	display:none;
+}
+.menu .hover-me:hover .branding-sub{
+
+	background-color:#2727;
+	display:block;
+	position:absolute;
+	right:150px;
+	margin:10px 0 0;
+
+}
+.branding-sub ul{
+
+	display:block;
+}
